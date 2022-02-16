@@ -1,3 +1,4 @@
+# from importlib_metadata import entry_points
 import setuptools
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -23,4 +24,9 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages("src"),
     python_requires=">=3.6",
+    install_requires=["boto3"],
+    entry_points={
+        'console_scripts': [
+            'pgbackup=pgbackup.cli:main'
+        ]},
 )

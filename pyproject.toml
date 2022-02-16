@@ -1,6 +1,6 @@
-[build-syste]
+[build-system]
 requires = [
     "setuptools>=42",
-    "wheel"
+    "wheel",
 ]
-build-backend = "setuptools.build_meta"m
+build-backend = "setuptools.build_meta"
