@@ -1,10 +1,10 @@
 # from importlib_metadata import entry_points
-import setuptools
+from setuptools import setup, find_packages
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-setuptools.setup(
+setup(
     name="pgbackuptool",
     version="0.0.1",
     author="Olega Obini",
@@ -22,7 +22,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     package_dir={"": "src"},
-    packages=setuptools.find_packages("src"),
+    packages=find_packages("src"),
     python_requires=">=3.6",
     install_requires=["boto3"],
     entry_points={
